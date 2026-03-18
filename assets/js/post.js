@@ -72,20 +72,35 @@ document.querySelectorAll('.before-after-slider').forEach(slider => {
 });
 
 // --- Luxembourg Reveal Game ---
+function showLuxPoll() {
+  const pollResults = document.getElementById('luxPollResults');
+  if (!pollResults || pollResults.classList.contains('visible')) return;
+  pollResults.classList.add('visible');
+  // Animate bars after a short delay so transition fires
+  setTimeout(() => {
+    pollResults.querySelectorAll('.lux-poll-bar-fill').forEach(bar => {
+      bar.style.width = bar.dataset.target + '%';
+    });
+  }, 80);
+}
+
 document.querySelectorAll('.lux-guess-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     if (btn.dataset.answer === 'wrong') {
       btn.classList.add('wrong-answer');
       setTimeout(() => btn.classList.remove('wrong-answer'), 600);
+      // Show poll after shake so they can see the right answer
+      setTimeout(showLuxPoll, 700);
     } else {
       btn.classList.add('right-answer');
       document.querySelectorAll('.lux-guess-btn').forEach(b => {
         if (b !== btn) { b.style.opacity = '0.35'; b.style.pointerEvents = 'none'; }
       });
+      showLuxPoll();
       const reveal = document.getElementById('luxReveal');
       if (reveal) {
         reveal.classList.add('visible');
-        setTimeout(() => reveal.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+        setTimeout(() => reveal.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 300);
       }
     }
   });

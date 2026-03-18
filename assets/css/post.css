@@ -64,12 +64,13 @@
 }
 
 .post-hero h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Shippori Mincho', serif;
   font-size: clamp(2.8rem, 7vw, 5.2rem);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--white);
-  line-height: 1.04;
-  letter-spacing: 0.07em;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: none;
   margin-bottom: 1rem;
 }
 
@@ -143,11 +144,13 @@
 .post-section.light .lux-punchline strong { color: var(--tan); }
 .post-section.light .lux-hint { color: var(--tan); }
 
-.post-section.light .lux-guess-btn {
+.post-section.light .lux-guess-btn,
+.post-section.cream .lux-guess-btn {
   border-color: rgba(240, 234, 216, 0.5);
   color: var(--cream);
 }
-.post-section.light .lux-guess-btn:hover {
+.post-section.light .lux-guess-btn:hover,
+.post-section.cream .lux-guess-btn:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: var(--cream);
 }
@@ -287,6 +290,46 @@ h2.light { color: var(--cream); }
   color: var(--text-muted);
   margin: 0;
   line-height: 1.55;
+}
+
+/* --- Crew Groups --- */
+.crew-group { margin-bottom: 2.5rem; }
+
+.crew-group-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--moss);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(42, 82, 64, 0.2);
+}
+
+.crew-grid-single { grid-template-columns: minmax(210px, 380px); }
+
+.crew-card-gage .crew-img { height: 220px; }
+.crew-card-gage .crew-info p { font-size: 0.88rem; }
+
+/* Buse placeholder card */
+.crew-card-placeholder { opacity: 0.75; }
+.crew-img-placeholder {
+  background: var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crew-img-coming-soon {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--stone);
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* 2023 friends flashback */
@@ -752,6 +795,67 @@ h2.light { color: var(--cream); }
   75% { transform: translateX(6px); }
 }
 
+/* --- Luxembourg Poll Distribution --- */
+.lux-poll-results {
+  display: none;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  animation: fadeSlideUp 0.4s ease;
+}
+.lux-poll-results.visible { display: block; }
+
+.lux-poll-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(240, 234, 216, 0.55);
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
+
+.lux-poll-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.55rem;
+}
+.lux-poll-bar-label {
+  width: 130px;
+  font-size: 0.78rem;
+  color: rgba(240, 234, 216, 0.72);
+  font-family: 'Lato', sans-serif;
+  flex-shrink: 0;
+}
+.lux-poll-bar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.lux-poll-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 5px;
+  transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.lux-poll-bar-fill.correct-fill { background: var(--moss-light); }
+
+.lux-poll-bar-pct {
+  font-size: 0.72rem;
+  color: rgba(240, 234, 216, 0.55);
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  width: 42px;
+  text-align: right;
+  flex-shrink: 0;
+}
+.correct-bar .lux-poll-bar-label { color: var(--cream); font-weight: 700; }
+.correct-pct { color: var(--moss-light) !important; }
+
 .lux-reveal {
   display: none;
   text-align: center;
@@ -844,6 +948,110 @@ h2.light { color: var(--cream); }
   color: rgba(240,234,216,0.3);
   display: flex;
   align-items: center;
+}
+
+/* --- Car Home Block (road trip — two-panel layout) --- */
+.car-home-block {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.car-panel {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.car-img-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
+}
+.car-home-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+.car-panel-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.55rem 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  text-align: center;
+  color: var(--white);
+  background: rgba(13, 32, 24, 0.75);
+  backdrop-filter: blur(4px);
+}
+.car-panel-badge--gold {
+  background: linear-gradient(90deg, rgba(13,32,24,0.82), rgba(160, 120, 56, 0.78), rgba(13,32,24,0.82));
+  color: var(--cream);
+  letter-spacing: 0.14em;
+}
+.car-panel-caption { margin: 0; }
+
+/* Shiny / brand-new treatment for the cool car */
+.car-img-wrap--shiny {
+  box-shadow:
+    0 0 0 1px rgba(196, 154, 92, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(196, 154, 92, 0.15);
+}
+.car-img--glow {
+  filter: brightness(1.06) contrast(1.04) saturate(1.1);
+  transition: filter 0.3s ease;
+}
+.car-img-wrap--shiny:hover .car-img--glow {
+  filter: brightness(1.12) contrast(1.06) saturate(1.15);
+}
+
+/* Sweep-shine overlay */
+.car-shine-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 48%,
+    rgba(255, 255, 255, 0.14) 50%,
+    rgba(255, 255, 255, 0.08) 52%,
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: carShine 4s ease-in-out infinite;
+}
+@keyframes carShine {
+  0%   { transform: translateX(-120%); }
+  40%  { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* Sparkle stars */
+.car-sparkle {
+  position: absolute;
+  font-size: 0.85rem;
+  color: var(--tan);
+  pointer-events: none;
+  animation: sparkle 2.4s ease-in-out infinite;
+  text-shadow: 0 0 6px rgba(196, 154, 92, 0.8);
+}
+.car-sparkle--1 { top: 12%; right: 14%; animation-delay: 0s; }
+.car-sparkle--2 { top: 38%; right: 8%;  animation-delay: 0.8s; font-size: 0.6rem; }
+.car-sparkle--3 { top: 20%; right: 28%; animation-delay: 1.5s; font-size: 0.65rem; }
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.6) rotate(0deg); }
+  50%       { opacity: 1; transform: scale(1.2) rotate(20deg); }
 }
 
 /* --- Heidelberg Grid --- */
@@ -1338,7 +1546,7 @@ h2.light { color: var(--cream); }
   .trip-photo-grid.three { grid-template-columns: 1fr 1fr; }
   .trip-photo-grid.two-one { grid-template-columns: 1fr; }
   .trip-photo-grid .feature { height: 240px; }
-  .rental-car-comparison { flex-direction: column; gap: 1rem; }
-  .rental-vs { display: none; }
+  .car-home-block { flex-direction: column; }
+  .car-home-img { height: 220px; }
   .rothenburg-grid { grid-template-columns: repeat(3, 1fr); }
 }

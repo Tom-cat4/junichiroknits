@@ -45,6 +45,14 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 0.03em;
 }
 
+/* Japanese serif for main display headings — Japandi elegance */
+h1, h2 {
+  font-family: 'Shippori Mincho', serif;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
 a {
   color: var(--moss);
   text-decoration: none;
@@ -160,7 +168,9 @@ img {
 
 /* --- Hero --- */
 .hero {
-  background: linear-gradient(150deg, var(--forest-deep) 0%, var(--forest) 55%, var(--forest-mid) 100%);
+  background:
+    linear-gradient(150deg, rgba(13,32,24,0.82) 0%, rgba(26,56,41,0.75) 55%, rgba(42,82,64,0.68) 100%),
+    url('../img/profile/tommyinkimono.jpg') center center / cover no-repeat;
   color: var(--cream);
   padding: 7rem 2rem 6rem;
   text-align: center;
@@ -168,12 +178,14 @@ img {
   overflow: hidden;
 }
 
-/* Topographic contour overlay */
+/* Japanese wave (nami) overlay */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cellipse cx='50' cy='50' rx='48' ry='28' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cellipse cx='50' cy='50' rx='36' ry='19' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.06'/%3E%3Cellipse cx='50' cy='50' rx='24' ry='11' fill='none' stroke='white' stroke-width='0.6' stroke-opacity='0.06'/%3E%3C/svg%3E") repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60'%3E%3Cpath d='M0 30 Q25 10 50 30 Q75 50 100 30 Q125 10 150 30 Q175 50 200 30' fill='none' stroke='white' stroke-width='0.9' stroke-opacity='0.06'/%3E%3Cpath d='M0 50 Q25 30 50 50 Q75 70 100 50 Q125 30 150 50 Q175 70 200 50' fill='none' stroke='white' stroke-width='0.7' stroke-opacity='0.04'/%3E%3Cpath d='M0 10 Q25 -10 50 10 Q75 30 100 10 Q125 -10 150 10 Q175 30 200 10' fill='none' stroke='white' stroke-width='0.7' stroke-opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 60px;
 }
 
 .hero-content {
@@ -193,13 +205,14 @@ img {
 }
 
 .hero h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Shippori Mincho', serif;
   font-size: clamp(3.2rem, 7vw, 5.5rem);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--white);
   margin-bottom: 1.2rem;
-  letter-spacing: 0.1em;
-  line-height: 1.0;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: none;
 }
 
 .hero p {
@@ -296,18 +309,47 @@ img {
 }
 
 .divider {
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--forest), var(--tan));
-  border-radius: 2px;
-  margin: 1.2rem auto 0;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--tan), transparent);
+  margin: 1.4rem auto 0;
+  position: relative;
+}
+
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--tan);
+  background: transparent;
 }
 
 /* --- About --- */
-#about { background-color: var(--brown); }
+#about {
+  background-color: var(--brown);
+  position: relative;
+}
+
+/* Sashiko diamond stitch overlay */
+#about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 2 L46 24 L24 46 L2 24 Z' fill='none' stroke='%23f0ead8' stroke-width='0.5' stroke-opacity='0.09'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#about .section-inner { position: relative; z-index: 1; }
 #about .section-eyebrow { color: var(--tan); }
 .about-text h2 { color: var(--cream); }
-.about-text p  { color: rgba(240, 234, 216, 0.72); }
+.about-text p  { color: rgba(240, 234, 216, 0.82); }
 
 .about-flex {
   display: flex;
@@ -327,7 +369,7 @@ img {
 }
 
 .about-text p {
-  color: var(--text-muted);
+  color: rgba(240, 234, 216, 0.82);
   margin-bottom: 1rem;
 }
 
@@ -350,6 +392,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 65%;
   border-radius: 4px;
 }
 
@@ -548,15 +591,32 @@ img {
 
 .knitting-card-body p {
   font-size: 0.87rem;
-  color: rgba(240, 234, 216, 0.55);
+  color: rgba(240, 234, 216, 0.72);
   margin: 0;
 }
 
 /* --- Thought Bubble Section --- */
-#thoughts { background-color: var(--brown); }
+#thoughts {
+  background-color: var(--brown);
+  position: relative;
+}
+
+/* Sashiko diamond stitch overlay */
+#thoughts::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 2 L46 24 L24 46 L2 24 Z' fill='none' stroke='%23f0ead8' stroke-width='0.5' stroke-opacity='0.09'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#thoughts .section-inner { position: relative; z-index: 1; }
 #thoughts .section-eyebrow { color: var(--tan); }
 #thoughts .section-header h2 { color: var(--cream); }
-#thoughts .section-header p { color: rgba(240, 234, 216, 0.65); }
+#thoughts .section-header p { color: rgba(240, 234, 216, 0.72); }
 #thoughts .divider { background: linear-gradient(90deg, var(--tan), var(--moss-light)); }
 
 .thoughts-grid {
