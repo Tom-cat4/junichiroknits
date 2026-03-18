@@ -1,5 +1,5 @@
 /* ========================================
-   JunichiroKnits — Main JavaScript
+   Junichiro — Main JavaScript
    ======================================== */
 
 // --- Mobile Nav Toggle ---
@@ -11,7 +11,6 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('open');
 });
 
-// Close mobile menu when a link is clicked
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -23,11 +22,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 const backToTopBtn = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 400) {
-    backToTopBtn.classList.add('visible');
-  } else {
-    backToTopBtn.classList.remove('visible');
-  }
+  backToTopBtn.classList.toggle('visible', window.scrollY > 400);
 });
 
 backToTopBtn.addEventListener('click', () => {
@@ -54,13 +49,15 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section));
 
 // --- Fade-in on scroll ---
-const fadeEls = document.querySelectorAll('.blog-card, .project-card, .about-flex');
+const fadeEls = document.querySelectorAll('.travel-card, .knitting-card, .thought-card, .about-flex');
 
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.style.transform = entry.target.classList.contains('about-flex')
+        ? 'translateY(0)'
+        : 'translateY(0)';
       fadeObserver.unobserve(entry.target);
     }
   });
@@ -69,6 +66,6 @@ const fadeObserver = new IntersectionObserver((entries) => {
 fadeEls.forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
   fadeObserver.observe(el);
 });

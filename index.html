@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JunichiroKnits — hand-crafted knitwear, a knitting blog, and cozy creations by Thomas Junichiro Erickson." />
-  <title>JunichiroKnits</title>
+  <meta name="description" content="Junichirō: travel stories, knitting projects, and raw thoughts by Thomas Junichirō Erickson." />
+  <title>Junichirō</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -19,14 +19,12 @@
   <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar">
     <div class="navbar-inner">
-      <a href="#" class="navbar-brand">
-        <span class="yarn">🧶</span> JunichiroKnits
-      </a>
+      <a href="#" class="navbar-brand">Junichirō</a>
       <ul class="navbar-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#etsy">Shop</a></li>
+        <li><a href="#travel">Travel</a></li>
+        <li><a href="#knitting">Knitting</a></li>
+        <li><a href="#thoughts">Thought Bubble</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -37,23 +35,23 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about">About</a>
-    <a href="#blog">Blog</a>
-    <a href="#projects">Projects</a>
-    <a href="#etsy">Shop</a>
+    <a href="#travel">Travel</a>
+    <a href="#knitting">Knitting</a>
+    <a href="#thoughts">Thought Bubble</a>
   </div>
 
   <!-- ===================== HERO ===================== -->
   <header class="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Hand-crafted with love &amp; yarn</p>
-      <h1>Welcome to<br />JunichiroKnits</h1>
+      <p class="hero-eyebrow">Adventure &nbsp;·&nbsp; Craft &nbsp;·&nbsp; Reflection</p>
+      <h1>Thomas<br />Junichirō</h1>
       <p>
-        A cozy corner of the internet for knitting projects, yarn musings,
-        and handmade goods you can take home.
+        A mechanical engineering PhD student who chases new places,
+        knits by firelight, and writes whatever's on his mind.
       </p>
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">See My Projects</a>
-        <a href="#etsy" class="btn btn-outline">Visit My Shop</a>
+        <a href="#travel" class="btn btn-primary">Explore Travel</a>
+        <a href="#thoughts" class="btn btn-outline">Read Thoughts</a>
       </div>
     </div>
   </header>
@@ -63,99 +61,90 @@
     <div class="section-inner">
       <div class="about-flex">
         <div class="about-avatar">
-          <!-- Replace the emoji with an <img> tag once you have a photo:
-               <img src="assets/img/profile.jpg" alt="Thomas Junichiro Erickson" />  -->
-          🧶
+          <!-- Replace with: <img src="assets/img/profile.jpg" alt="Thomas Junichirō Erickson" /> -->
+          ⛰️
         </div>
         <div class="about-text">
           <div class="section-eyebrow">About Me</div>
-          <h2>Hi, I'm Thomas!</h2>
+          <h2>Hi, I'm Thomas.</h2>
           <p>
-            I'm a Mechanical Engineering PhD student with a serious passion for
-            knitting. When I'm not running CFD simulations or studying
-            hyporheic exchange, you'll find me with two needles and a skein of
-            something soft.
+            Mechanical Engineering PhD student. CFD researcher. Traveler. Occasional knitter.
+            I built this site to document the things that matter to me: the places I go,
+            the things I make, and the thoughts I can't shake loose.
           </p>
           <p>
-            This site is where I share my knitting journey — project write-ups,
-            pattern notes, yarn reviews, and the occasional rambling blog post
-            about life in grad school.
+            When I'm not running simulations or studying hyporheic exchange,
+            I'm usually somewhere I've never been before, with a camera in one hand
+            and too much coffee in the other.
           </p>
-          <a href="#blog" class="btn btn-primary">Read the Blog</a>
+          <a href="#travel" class="btn btn-primary">See My Travels</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== BLOG ===================== -->
-  <section class="section" id="blog">
+  <!-- ===================== TRAVEL ===================== -->
+  <section class="section" id="travel">
     <div class="section-inner">
       <div class="section-header">
-        <div class="section-eyebrow">Blog</div>
-        <h2>Latest Posts</h2>
-        <p>Thoughts on knitting, grad school, yarn hauls, and everything in between.</p>
+        <div class="section-eyebrow">Travel</div>
+        <h2>On the Road</h2>
+        <p>Places I've been, stories worth telling, and photos from the field.</p>
         <div class="divider"></div>
       </div>
 
-      <div class="blog-grid">
+      <div class="travel-grid">
 
-        <!-- Blog Post 1 -->
-        <article class="blog-card">
-          <div class="blog-card-img-placeholder" style="background: linear-gradient(135deg, #d4a373, #b8855a);">
-            🧣
-          </div>
-          <div class="blog-card-body">
-            <span class="blog-tag">Pattern Notes</span>
-            <div class="blog-meta">
-              <span>📅</span> March 10, 2026
+        <!-- Aachen post — LIVE -->
+        <article class="travel-card">
+          <a href="travel/aachen.html" class="travel-card-img-link">
+            <div class="travel-card-img-placeholder" style="background: linear-gradient(160deg, #0d2018 0%, #1a3829 50%, #2a5240 100%);">
+              <span class="travel-card-location-overlay">Aachen, Germany</span>
             </div>
-            <h3>My First Brioche Scarf — What I Learned</h3>
+          </a>
+          <div class="travel-card-body">
+            <div class="travel-meta-row">
+              <span class="travel-tag">Europe</span>
+              <span class="travel-date">March 2026</span>
+            </div>
+            <h3><a href="travel/aachen.html">Aachen: Cathedrals, Charlemagne &amp; Cold Beer</a></h3>
             <p>
-              Brioche stitch had been on my bucket list for years. I finally took
-              the plunge and here's everything I wish someone had told me before I
-              cast on.
+              A week in one of Germany's oldest imperial cities. Carolingian history,
+              UNESCO architecture, and the kind of food that makes you want to stay forever.
             </p>
-            <a href="#" class="blog-read-more">Read more →</a>
+            <a href="travel/aachen.html" class="card-read-more">Read the Story →</a>
           </div>
         </article>
 
-        <!-- Blog Post 2 -->
-        <article class="blog-card">
-          <div class="blog-card-img-placeholder" style="background: linear-gradient(135deg, #7a9e7e, #5a7f5e);">
-            🐑
+        <!-- Placeholder 2 -->
+        <article class="travel-card coming-soon">
+          <div class="travel-card-img-placeholder" style="background: linear-gradient(160deg, #2a3a1a 0%, #3d5228 50%, #5a6e40 100%);">
+            <span class="travel-card-location-overlay">Next Destination</span>
           </div>
-          <div class="blog-card-body">
-            <span class="blog-tag">Yarn Haul</span>
-            <div class="blog-meta">
-              <span>📅</span> February 22, 2026
+          <div class="travel-card-body">
+            <div class="travel-meta-row">
+              <span class="travel-tag">Coming Soon</span>
+              <span class="travel-date">2026</span>
             </div>
-            <h3>Winter Yarn Haul: Merino &amp; Beyond</h3>
-            <p>
-              I went a little overboard at the local fiber festival. Here's
-              everything I picked up, what I'm planning to make, and my
-              honest first-impressions of each yarn.
-            </p>
-            <a href="#" class="blog-read-more">Read more →</a>
+            <h3>The Next Chapter</h3>
+            <p>More stories in the works. The road doesn't stop here.</p>
+            <span class="card-read-more muted">Stay tuned</span>
           </div>
         </article>
 
-        <!-- Blog Post 3 -->
-        <article class="blog-card">
-          <div class="blog-card-img-placeholder" style="background: linear-gradient(135deg, #c4956a, #8b5e3c);">
-            📚
+        <!-- Placeholder 3 -->
+        <article class="travel-card coming-soon">
+          <div class="travel-card-img-placeholder" style="background: linear-gradient(160deg, #3a2a1a 0%, #5a4030 50%, #7a5a42 100%);">
+            <span class="travel-card-location-overlay">Field Notes</span>
           </div>
-          <div class="blog-card-body">
-            <span class="blog-tag">Grad School Life</span>
-            <div class="blog-meta">
-              <span>📅</span> February 5, 2026
+          <div class="travel-card-body">
+            <div class="travel-meta-row">
+              <span class="travel-tag">Coming Soon</span>
+              <span class="travel-date">2026</span>
             </div>
-            <h3>Knitting Through a Dissertation — My Coping Ritual</h3>
-            <p>
-              There's something about the rhythmic click of needles that keeps
-              anxiety at bay during the long stretches of dissertation writing.
-              Here's how knitting keeps me grounded.
-            </p>
-            <a href="#" class="blog-read-more">Read more →</a>
+            <h3>Field Notes from Somewhere New</h3>
+            <p>Every trip earns a story. More on the way.</p>
+            <span class="card-read-more muted">Stay tuned</span>
           </div>
         </article>
 
@@ -163,111 +152,48 @@
     </div>
   </section>
 
-  <!-- ===================== PROJECTS ===================== -->
-  <section class="section" id="projects">
+  <!-- ===================== KNITTING ===================== -->
+  <section class="section" id="knitting">
     <div class="section-inner">
       <div class="section-header">
-        <div class="section-eyebrow">Knitting Projects</div>
+        <div class="section-eyebrow">Knitting</div>
         <h2>What I've Made</h2>
-        <p>A showcase of finished objects — from cozy sweaters to tiny socks.</p>
+        <p>Handmade projects. Slow work done well.</p>
         <div class="divider"></div>
       </div>
 
-      <div class="projects-grid">
+      <div class="knitting-grid">
 
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-card-img-placeholder" style="background: linear-gradient(160deg, #d4a373 0%, #5c3d2e 100%);">
-            🧥
-          </div>
-          <div class="project-card-body">
+        <div class="knitting-card">
+          <div class="knitting-card-img-placeholder" style="background: linear-gradient(160deg, #c49a5c 0%, #5c3d2e 100%);">🧥</div>
+          <div class="knitting-card-body">
             <h3>Honeycomb Cable Sweater</h3>
-            <div class="project-details">
-              <span class="project-detail">🧶 Merino Wool</span>
-              <span class="project-detail">🎨 Caramel</span>
-              <span class="project-detail">⏱ 6 weeks</span>
+            <div class="knitting-details">
+              <span>Merino Wool</span><span>Caramel</span><span>6 Weeks</span>
             </div>
-            <p>A cozy cabled pullover worked in the round with honeycomb panels on the yoke.</p>
+            <p>Cabled pullover worked in the round with honeycomb panels on the yoke.</p>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-card-img-placeholder" style="background: linear-gradient(160deg, #7a9e7e 0%, #3d5c40 100%);">
-            🧤
-          </div>
-          <div class="project-card-body">
+        <div class="knitting-card">
+          <div class="knitting-card-img-placeholder" style="background: linear-gradient(160deg, #1a3829 0%, #3d6b52 100%);">🧤</div>
+          <div class="knitting-card-body">
             <h3>Stranded Colorwork Mittens</h3>
-            <div class="project-details">
-              <span class="project-detail">🧶 Icelandic Lopi</span>
-              <span class="project-detail">🎨 Forest &amp; Cream</span>
-              <span class="project-detail">⏱ 10 days</span>
+            <div class="knitting-details">
+              <span>Icelandic Lopi</span><span>Forest &amp; Cream</span><span>10 Days</span>
             </div>
-            <p>Nordic snowflake pattern mittens — my first serious attempt at two-color stranded work.</p>
+            <p>Nordic snowflake pattern. My first serious two-color stranded work.</p>
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-card-img-placeholder" style="background: linear-gradient(160deg, #a0b8c8 0%, #4a6b7c 100%);">
-            🧦
-          </div>
-          <div class="project-card-body">
+        <div class="knitting-card">
+          <div class="knitting-card-img-placeholder" style="background: linear-gradient(160deg, #3a4a2a 0%, #5a6a42 100%);">🧦</div>
+          <div class="knitting-card-body">
             <h3>Heel-Flap Toe-Up Socks</h3>
-            <div class="project-details">
-              <span class="project-detail">🧶 Sock Yarn</span>
-              <span class="project-detail">🎨 Ocean Blue</span>
-              <span class="project-detail">⏱ 3 weeks</span>
+            <div class="knitting-details">
+              <span>Sock Yarn</span><span>Olive</span><span>3 Weeks</span>
             </div>
-            <p>Classic toe-up construction with a slipped-stitch heel flap for extra durability.</p>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-card-img-placeholder" style="background: linear-gradient(160deg, #e8c4a0 0%, #9c6b3c 100%);">
-            🎀
-          </div>
-          <div class="project-card-body">
-            <h3>Lace Shawlette</h3>
-            <div class="project-details">
-              <span class="project-detail">🧶 Fingering Silk Blend</span>
-              <span class="project-detail">🎨 Blush</span>
-              <span class="project-detail">⏱ 2 weeks</span>
-            </div>
-            <p>A delicate crescent shawl worked in a feather-and-fan lace pattern. Gifted to my mom.</p>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="project-card-img-placeholder" style="background: linear-gradient(160deg, #c8a8c8 0%, #7c4f7c 100%);">
-            👒
-          </div>
-          <div class="project-card-body">
-            <h3>Slouchy Ribbed Beanie</h3>
-            <div class="project-details">
-              <span class="project-detail">🧶 Bulky Alpaca</span>
-              <span class="project-detail">🎨 Mauve</span>
-              <span class="project-detail">⏱ 4 days</span>
-            </div>
-            <p>A quick weekend knit — oversized ribbing for maximum cozy factor. Great beginner hat.</p>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card">
-          <div class="project-card-img-placeholder" style="background: linear-gradient(160deg, #f0c87a 0%, #b07820 100%);">
-            🐻
-          </div>
-          <div class="project-card-body">
-            <h3>Amigurumi Bear</h3>
-            <div class="project-details">
-              <span class="project-detail">🧶 Cotton DK</span>
-              <span class="project-detail">🎨 Honey &amp; Brown</span>
-              <span class="project-detail">⏱ 1 week</span>
-            </div>
-            <p>A stuffed bear worked in the round — my first amigurumi! Turned out surprisingly huggable.</p>
+            <p>Classic toe-up construction with a slipped-stitch heel flap for durability.</p>
           </div>
         </div>
 
@@ -275,56 +201,71 @@
     </div>
   </section>
 
-  <!-- ===================== ETSY ===================== -->
-  <section id="etsy">
-    <div class="etsy-inner">
-      <div class="etsy-badge">
-        🛍 Now on Etsy
-      </div>
-      <h2>Support My Work</h2>
-      <p>
-        Love what you see? You can find hand-knit goods, custom orders, and
-        pattern downloads in my Etsy shop. Every purchase helps fund more yarn
-        (and more PhD survival snacks).
-      </p>
-
-      <div class="etsy-features">
-        <div class="etsy-feature">
-          <span class="etsy-feature-icon">🤝</span>
-          <span class="etsy-feature-label">Custom Orders</span>
-        </div>
-        <div class="etsy-feature">
-          <span class="etsy-feature-icon">📬</span>
-          <span class="etsy-feature-label">Ships Worldwide</span>
-        </div>
-        <div class="etsy-feature">
-          <span class="etsy-feature-icon">📄</span>
-          <span class="etsy-feature-label">PDF Patterns</span>
-        </div>
-        <div class="etsy-feature">
-          <span class="etsy-feature-icon">💚</span>
-          <span class="etsy-feature-label">Made with Love</span>
-        </div>
+  <!-- ===================== THOUGHT BUBBLE ===================== -->
+  <section class="section" id="thoughts">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Thought Bubble</div>
+        <h2>What's on My Mind</h2>
+        <p>Unfiltered thoughts on grad school, life, and everything in between.</p>
+        <div class="divider"></div>
       </div>
 
-      <!-- Replace href with your actual Etsy shop URL -->
-      <a href="https://www.etsy.com/shop/JunichiroKnits" target="_blank" rel="noopener" class="btn btn-etsy">
-        🛒 Visit My Etsy Shop
-      </a>
-      <p class="etsy-note">Opens in a new tab · No account required to browse</p>
+      <div class="thoughts-grid">
+
+        <article class="thought-card">
+          <div class="thought-card-body">
+            <span class="thought-tag">Grad School</span>
+            <div class="thought-meta">March 10, 2026</div>
+            <h3>The Dissertation Mind: Why I Can't Turn It Off</h3>
+            <p>
+              There's a specific kind of exhaustion that comes from thinking about the
+              same problem for years. Here's what that actually looks like from the inside.
+            </p>
+            <a href="#" class="card-read-more">Read more →</a>
+          </div>
+        </article>
+
+        <article class="thought-card">
+          <div class="thought-card-body">
+            <span class="thought-tag">Perspective</span>
+            <div class="thought-meta">February 22, 2026</div>
+            <h3>Why I Travel Alone (And Why You Should Too)</h3>
+            <p>
+              Solo travel isn't lonely. It's the clearest lens I've found for understanding
+              who you actually are when no one's watching.
+            </p>
+            <a href="#" class="card-read-more">Read more →</a>
+          </div>
+        </article>
+
+        <article class="thought-card">
+          <div class="thought-card-body">
+            <span class="thought-tag">Craft</span>
+            <div class="thought-meta">February 5, 2026</div>
+            <h3>On Making Things with Your Hands in a Digital World</h3>
+            <p>
+              Knitting, building, tinkering. There's something radical about creating
+              physical things when everything else is a screen.
+            </p>
+            <a href="#" class="card-read-more">Read more →</a>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer-brand">🧶 JunichiroKnits</div>
+    <div class="footer-brand">Junichirō</div>
     <ul class="footer-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#etsy">Shop</a></li>
+      <li><a href="#travel">Travel</a></li>
+      <li><a href="#knitting">Knitting</a></li>
+      <li><a href="#thoughts">Thought Bubble</a></li>
     </ul>
-    <p class="footer-copy">&copy; 2026 Thomas Junichiro Erickson. Made with 🧶 and too much coffee.</p>
+    <p class="footer-copy">&copy; 2026 Thomas Junichirō Erickson. Somewhere between a dissertation and the next adventure.</p>
   </footer>
 
   <!-- Back to Top -->
